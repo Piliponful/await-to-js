@@ -103,5 +103,9 @@
     "typedoc": "^0.8.0",
     "typescript": "^2.3.4",
     "validate-commit-msg": "^2.12.2"
+  },
+  "dependencies": {
+    "es6-promisify": "^6.1.1",
+    "is-promise": "^4.0.0"
   }
 }

@@ -22,6 +22,21 @@ import to from 'await-to-js';
 // If you use CommonJS (i.e NodeJS environment), it should be:
 // const to = require('await-to-js').default;
 
+// This is new functionality
+// --------
+function someFuncWithError (someArg) {
+  if (Math.random() > .5) {
+    throw new Error("Error")
+  } else {
+    return 1
+  }
+}
+
+function someFunc () {
+  const [err, result] = to(() => someFuncWithError(1))
+}
+// --------
+
 async function asyncTaskWithCb(cb) {
      let err, user, savedTask, notification;
 
